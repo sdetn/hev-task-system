@@ -37,6 +37,8 @@ setaltstack (const stack_t *ss, stack_t *oss)
 {
 #if defined(TARGET_OS_TV) && TARGET_OS_TV
     return 0;
+#elif defined(TARGET_OS_WATCH) && TARGET_OS_WATCH
+    return 0;
 #else
     return sigaltstack (ss, oss);
 #endif
